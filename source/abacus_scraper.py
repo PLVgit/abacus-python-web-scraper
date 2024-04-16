@@ -4,6 +4,7 @@ import pandas as pd
 
 class AbacusScraper:
     def __init__(self, base_url):
+        # Initializes the global variables
         self.base_url = 'https://www.abacus.coop/es/libros/libros-recomendados/libros-mas-leidos'
         self.page_urls = []
         self.book_urls = []
@@ -33,6 +34,7 @@ class AbacusScraper:
             self.page_urls.append(page_url)
 
     def get_book_urls(self):
+        # Generates the links for scraping individual books
         for link in self.page_urls:
             response = requests.get(link)
             soup = BeautifulSoup(response.content, 'html.parser')
