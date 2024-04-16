@@ -19,4 +19,4 @@ scraper.scrape_book_details()
 scraper.create_dataframe()
 
 # Export the DataFrame to a CSV file
-scraper.export_to_csv('dataset.csv')
+scraper.export_to_csv('abacus_llibres_recomanats.csv')
